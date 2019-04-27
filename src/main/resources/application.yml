@@ -1,15 +1,22 @@
-jdbc:
-  driverClassName: com.mysql.jdbc.Driver
-  url: jdbc:mysql://192.168.10.10/jdbc
-  username: homestead
-  password: secret
-
-
 server:
   port: 9000
   servlet:
     path: /   #映射路径  DispatcherServlet, 监听器路径
 
-logging:
-  level:
-    com.like: debug
+#logging:
+#  level:
+#    com.like: debug
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.10.10/jdbc
+    username: homestead
+    password: secret
+
+mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
+  type-aliases-package: com.like.pojo
+#  mapper-locations: mapper/*.xml
