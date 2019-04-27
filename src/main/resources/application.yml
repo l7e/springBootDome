@@ -3,3 +3,13 @@ jdbc:
   url: jdbc:mysql://192.168.10.10/jdbc
   username: homestead
   password: secret
+
+
+server:
+  port: 9000
+  servlet:
+    path: /   #映射路径  DispatcherServlet, 监听器路径
+
+logging:
+  level:
+    com.like: debug

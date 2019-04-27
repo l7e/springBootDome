@@ -10,15 +10,14 @@ import javax.sql.DataSource;
 @Controller
 public class HelloController
 {
-    @Autowired
-    private DataSource dataSource;
+//    @Autowired
+//    private DataSource dataSource;
 
 
     @GetMapping("/index")
     @ResponseBody
     public String index()
     {
-        System.out.println(dataSource);
         return "hello";
     }
 }
