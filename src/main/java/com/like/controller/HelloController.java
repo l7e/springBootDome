@@ -1,23 +1,26 @@
 package com.like.controller;
 
+import com.like.pojo.User;
+import com.like.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.sql.DataSource;
 
-@Controller
+@RequestMapping("/user")
+@RestController
 public class HelloController
 {
 //    @Autowired
 //    private DataSource dataSource;
 
+    @Autowired
+    private UserService userService;
 
-    @GetMapping("/index")
-    @ResponseBody
-    public String index()
+
+    @GetMapping("{id}")
+    public User index(@PathVariable("id") Long id)
     {
-        return "hello";
+        return userService.findById(id);
     }
 }

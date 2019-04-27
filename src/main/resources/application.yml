@@ -3,9 +3,9 @@ server:
   servlet:
     path: /   #映射路径  DispatcherServlet, 监听器路径
 
-#logging:
-#  level:
-#    com.like: debug
+logging:
+  level:
+    com.like: debug
 
 
 spring:
